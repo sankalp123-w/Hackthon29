@@ -6,16 +6,78 @@ Home Page
 
 
 {% block content %}
-<h1>Welcome {{ request.user.username }}</h1>
-<h1>Auth status: {{request.user.is_authenticated}}</h1>
-<br>
-<br>
-<p>
-    Depending on the Auth status, you will be seeing login/logout button at the top right.
-    <br>
-    <br>
-    Login: &nbsp&nbsp&nbspTo continue login
-    <br>
-    Logout: To sign out of the application
-</p>
+<!-- <h1>Welcome {{ request.user.username }}</h1> -->
+<!-- <h1>Auth status: {{request.user.is_authenticated}}</h1> -->
+
+<div class="container text-center" style="margin-top:150px;">
+  <div class="row">
+    <div class="col-6">
+      <img
+          src="../static/images/hero.jpg"
+         width="100%"
+          class="img-fluid"
+          alt="hero"
+        />
+    </div>
+    <div class="col">
+      {% if request.user.is_authenticated %}
+      <h2 >Welcome {{ request.user.username }} !</h2>
+      <div class="container">
+      
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Default</td>
+            <td>Defaultson</td>
+            <td>def@somemail.com</td>
+          </tr>      
+      <tr class="table-primary">
+        <td>Primary</td>
+        <td>Joe</td>
+        <td>joe@example.com</td>
+      </tr>
+      <tr class="table-success">
+        <td>Success</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr class="table-danger">
+        <td>Danger</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr class="table-info">
+        <td>Info</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+      <tr class="table-warning">
+        <td>Warning</td>
+        <td>Refs</td>
+        <td>bo@example.com</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+</div>
+
+  {% else %}
+    <h3 class="p-4">Tired of traditional text-based password authentication?</h3>
+  <h2  class="p-3">Welcome {{ request.user.username }} to the world of graphical password authentication system</h2>
+
+{% endif %}
+        
+    </div>
+    </div>
+    
+</div>
+
 {% endblock %}
