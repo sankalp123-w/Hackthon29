@@ -15,10 +15,16 @@
         <div class="col-2 no-gutters">
             <!-- {{ forloop.parentloop.counter0  }}-{{ forloop.counter0  }} -->
             <img src='{% static 'images/pwd/' %}{{ col }}.png' alt=" img" style="
+<<<<<<< HEAD
                 height: 100%;
                 padding-right: 10px;
                 width: 100%;" id="{{ forloop.parentloop.counter0  }}{{ forloop.counter0  }}"
                 onclick="onSelect({{forloop.parentloop.counter0}}, {{forloop.counter0}})">
+=======
+                height: 50px;
+                width: 50px;" id="{{col}}"
+                onclick="{onSelect(this.id)}">
+>>>>>>> f1983c044b1ee0425a4795e16810b48b229379da
         </div>
         {% endfor %}
     </div>

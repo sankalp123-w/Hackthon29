@@ -48,8 +48,8 @@ Login Page
 <script>
     var gpwd_set = new Set();
 
-    function onSelect(r, c) {
-        var res = r.toString() + c.toString();
+    function onSelect(e) {
+        var res = e;
         if (gpwd_set.has(res)) {
             console.log('true');
             gpwd_set.delete(res);
