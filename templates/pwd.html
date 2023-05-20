@@ -12,19 +12,14 @@
     {% for row in p_images %}
     <div class="row no-gutters">
         {% for col in row %}
-        <div class="col-2 no-gutters">
+        <div class="col-2 no-gutters overflow-auto " >
             <!-- {{ forloop.parentloop.counter0  }}-{{ forloop.counter0  }} -->
             <img src='{% static 'images/pwd/' %}{{ col }}.png' alt=" img" style="
-<<<<<<< HEAD
                 height: 100%;
+                width: 100%;
                 padding-right: 10px;
-                width: 100%;" id="{{ forloop.parentloop.counter0  }}{{ forloop.counter0  }}"
-                onclick="onSelect({{forloop.parentloop.counter0}}, {{forloop.counter0}})">
-=======
-                height: 50px;
-                width: 50px;" id="{{col}}"
+                " id="{{col}}"
                 onclick="{onSelect(this.id)}">
->>>>>>> f1983c044b1ee0425a4795e16810b48b229379da
         </div>
         {% endfor %}
     </div>
